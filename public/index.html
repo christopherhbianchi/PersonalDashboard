@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app='todosAppModule'>
+  <head>
+
+<link rel='shortcut icon' type='image/png' href='styling/images/black-and-blue-globe-512-243993.png'
+
+<!-- source in our dependencies... angular, modules, etc. -->
+<!-- Angular and 3rd party -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js">
+	</script> <!-- angular -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js">
+	</script> <!-- ngRoute -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-cookies.min.js">
+  </script> <!-- ngCookies -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script> <!-- jQuery -->
+<!-- Modules -->
+<script src="app/appModule/app.module.js"></script>
+<script src="app/authModule/auth.module.js"></script>
+<script src="app/stocksModule/stocks.module.js"></script>
+<!-- Services -->
+<script src="app/appModule/todos/todolist.service.js"></script>
+<script src="app/authModule/auth.service.js"></script>
+<script src="app/stocksModule/stocks/stocks.service.js"></script>
+<!-- Filters -->
+<!-- Components -->
+<script src="app/appModule/todos/todolist.component.js"></script>
+<script src="app/appModule/navigation/navigation.component.js"></script>
+<script src="app/authModule/login/login.component.js"></script>
+<script src="app/authModule/register/register.component.js"></script>
+<script src="app/authModule/logout/logout.component.js"></script>
+<script src="app/stocksModule/stocks/stocks.component.js"></script>
+
+<!-- Bootstrap and Styling -->
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="styling/styling.css">
+
+
+
+
+
+  	 <title>Todo List Application</title>
+  </head>
+  <body>
+
+
+
+
+    <!-- our ng-view tag-->
+    <ng-view></ng-view>
+
+
+
+
+
+  </body>
+</html>

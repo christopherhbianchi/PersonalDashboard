@@ -1,0 +1,68 @@
+<navigation></navigation></br>
+<!-- makes it so our navbar shows up -->
+
+<div name='welcomePage' ng-hide='vm.editTodo'>
+<h2 id='header'>Here is what's on the agenda.</h2>
+<h2 id='{{vm.urgencyLevel}}'>Remaining tasks: {{vm.remaining}}</h2><!-- id changes based on # of items to do -->
+<div name='todoList' class='table-responsive'>
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+        <td>Description</td>
+        <td>Is Done</td>
+        <td>Has Attachment</td>
+        <td>Edit Item</td>
+        <td>Remove Item</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='localTodo in vm.todoList'>
+        <td>{{localTodo.description}}</td>
+        <td><input type = 'checkbox' ng-model='localTodo.isDone' ng-click='vm.updateTodo(localTodo)'/></td>
+        <td><input type = 'checkbox' ng-model='localTodo.hasAttachment' ng-click='vm.updateTodo(localTodo)'/></td>
+        <td><input class='btn btn-secondary' type = 'button' value='Edit' ng-click='vm.setEditTodo(localTodo)'/></td>
+        <td><input class='btn btn-secondary' type = 'button' value='Remove' ng-click='vm.destroyTodo(localTodo)'/></td>
+      </tr>
+      <!-- We could just add an additional row down here. it would be created after the
+    localTodo rows would finish being generated -->
+    <tr>
+      <td><input type='text' placeholder='Add additional item' ng-model='todo.description'/></td>
+      <td><input type='checkbox' ng-model='todo.isDone'/></td>
+      <td><input type='checkbox' ng-model='todo.hasAttachment'/></td>
+      <td><input class='btn btn-secondary' type='button' value='Create' ng-click='vm.createTodo(todo); todo={}'></td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <stocks-component></stocks-component>
+</div>
+
+</div>
+<div name='updateTodo' ng-show='vm.editTodo'>
+  <h2 id='header'>Update your item.</h2>
+  <div name='updateTodoTable' class='table-responsive'>
+    <table class='table table-striped'>
+      <thead>
+        <tr>
+          <td>Description</td>
+          <td>Is Done</td>
+          <td>Has Attachment</td>
+          <td>Save</td>
+          <td>Cancel</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type='text' value='{{vm.editTodo.description}}' ng-model='vm.editTodo.description'></td>
+          <td><input type = 'checkbox' ng-model='vm.editTodo.isDone'/></td>
+          <td><input type = 'checkbox' ng-model='vm.editTodo.hasAttachment'/></td>
+          <td><input class='btn btn-secondary' type = 'button' value='Save' ng-click='vm.updateTodo(vm.editTodo)'/></td>
+          <td><input class='btn btn-secondary' type = 'button' value='Cancel' ng-click="vm.cancelEditTodo()"/></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

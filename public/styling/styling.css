@@ -1,0 +1,50 @@
+/* table {
+	table-layout:'fixed';
+	border-collapse:collapse;
+	border:solid 1px black;
+}
+
+td{
+	border:solid 1px black;
+}
+*/
+#high{
+	color:#ff0000;
+}
+#medium{
+	color:#cccc00;
+}
+#low{
+	color:#00cc00;
+}
+
+/*
+This gives us padding so that elements aren't hidden under the fixed navbar
+*/
+body{
+	padding-top: 50px;
+}
+
+#navbar{
+	/* margin: 80px 0 0; ... #333333*/
+	color:#E6E6E6;
+	background-color:	#4A4D52;
+}
+#title{
+	color:#E6E6E6;
+}
+
+#highTasks{
+	color:#ff0000;
+}
+
+
+img{
+		max-width:70%;
+		max-height:70%;
+}
+
+#profImg{
+		max-width:20%;
+		max-height:20%;
+}
